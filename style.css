@@ -1,0 +1,50 @@
+.none {
+    display: none;
+}
+
+#zodiac-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#city-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mist {
+    background-image: url("mist.JPG");
+    background-size: 100% 100%;
+}
+
+.clear{
+    background-image: url("clear.JPG");
+    background-size: 100% 100%;
+}
+
+.light-cloud{
+    background-image: url("light-clouds.JPG");
+    background-size: 100% 100%;
+}
+
+.cloudy{
+    background-image: url("cloudy.JPG");
+    background-size: 100% 100%;
+}
+
+.snowy{
+    background-image: url("snow.JPG");
+    background-size: 100% 100%;
+}
+
+.rainy{
+    background-image: url("rain.JPG");
+    background-size: 100% 100%;
+}
+
+.thunder{
+    background-image: url("thunder.JPG");
+    background-size: 100% 100%;
+}

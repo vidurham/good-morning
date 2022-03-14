@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Good Morning</title>
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+        <p class="title">
+            Good Morning
+        </p>
+        <p class="subtitle">
+            Get your weather and horoscope at the start of every day
+        </p>
+        </div>
+    </section>
+
+    <div class="opening">
+        <div class="columns is-centered">
+            <h2 class="title is-2 is-underlined my-4">Select Your Zodiac Sign</h2>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="select is-centered  my-3">
+                <select id="selection">
+                    <option>Aries</option>
+                    <option>Taurus</option>
+                    <option>Gemini</option>
+                    <option>Cancer</option>
+                    <option>Leo</option>
+                    <option>Virgo</option>
+                    <option>Libra</option>
+                    <option>Scorpio</option>
+                    <option>Sagittarius</option>
+                    <option>Capricorn</option>
+                    <option>Aquarius</option>
+                    <option>Pisces</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <h2 class="title is-2 is-underlined my-4 is-responsive">Insert Your Location</h2>
+        </div>
+        
+        <div class="columns is-centered my-4">
+            <input class="input is-info column is-one-quarter is-centered" type="text" placeholder="Location" id="city">
+        </div>
+
+        <div class="columns is-centered my-4">
+            <button class="button is-large is-info" type="button" id="btn">Good Morning</button>
+        </div>
+    </div>
+
+    <div class="results none">
+        <div class="columns">
+            <div class="column" id="zodiac-sign"></div>
+            <div class="column" id="zodiac-results"></div>
+        </div>
+        <div class="columns my-4">
+            <div class="column" id="city-text"></div>
+            <div class="column" id="weather-results"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
