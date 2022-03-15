@@ -109,7 +109,7 @@ var zodiacResults = function() {
             if (data.mood === "Lucky" || data.mood === "Attractive") {
                 playlist = "37i9dQZF1DX6GwdWRQMQpq"
             }
-            fetch("https://spotify23.p.rapidapi.com/playlist/?id=" + playlist, {
+            fetch("https://spotify23.p.rapidapi.com/playlist_tracks/?id=" + playlist, {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "spotify23.p.rapidapi.com",
@@ -117,11 +117,13 @@ var zodiacResults = function() {
                     }
             })
             .then(response => {
-                console.log(response);
                 if (response.ok)
                 response.json().then(function(data) {
-                    var songs = "https://open.spotify.com/playlist/" + playlist
-                    zodiacMood.setAttribute("href", songs)
+                    console.log(data)
+                    var random = Math.round(Math.random()*data.items.length);
+                    console.log(random)
+                    var song = data.items[random].track.external_urls.spotify
+                    zodiacMood.setAttribute("href", song)
                     })
             });
             zodiacResultsEl.append(zodiacMood);
