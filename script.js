@@ -65,48 +65,48 @@ var useOneCall = function (cityData) {
                     dailyOutlook.innerHTML = "Daily Outlook for " + city
                     
                     if (morning < 32) {
-                        morningOutlook.innerHTML = "Oh my its cold out there"
+                        morningOutlook.innerHTML = "Well, it's going to be a cold one this morning, dropping below freezing. Don't forget to bring a coat or heavy jacket with you before leaving! "
                     }
                     if (morning > 32 && morning < 50) {
-                        morningOutlook.innerHTML = "A bit nippy this morning! "
+                        morningOutlook.innerHTML = "A bit nippy out this morning! Probably a great day for a long sleeve shirt, but who knows! "
                     }
                     if (morning > 50 && morning < 70) {
-                        morningOutlook.innerHTML = "Feeling good out there"
+                        morningOutlook.innerHTML = "Feeling good out there this morning, looking like a single layer day. "
                     }
                     if (morning > 70) {
-                        morningOutlook.innerHTML = "What a lovely morning"
+                        morningOutlook.innerHTML = "Things are heating up this morning! Could be quite a hot one today. "
                     }
                     if (day < 32) {
-                        dayOutlook.innerHTML = "So So Cold"
+                        dayOutlook.innerHTML = "It's freezing cold outside, so you may as well avoid it if you can. If you must go out, please dress warm and appropriately. "
                     }
                     if (day > 32 && day < 50) {
-                        dayOutlook.innerHTML = "It's gonna be brisk out there"
+                        dayOutlook.innerHTML = "It's gonna be a brisk one out there today! Have a jacket or sweatshirt on standby so you don't get caught lacking today. "
                     }
                     if (day > 50 && day < 65) {
-                        dayOutlook.innerHTML = "Decent day, great for a long sleeve. "
+                        dayOutlook.innerHTML = "Decent day, great for a long sleeve, light jacket or even just a t-shirt, if your feeling a little bold in the slightly above cold. "
                     }
                     if (day > 65 && day < 80) {
-                        dayOutlook.innerHTML = "It's gonna heat up a little bit out there overe the course of the day"
+                        dayOutlook.innerHTML = "My favorite meteorologist saying 'It's gonna heat up a little bit out there over the course of the day, so stay hydrated and find something fun to do'"
                     }
                     if (day > 80) {
-                        dayOutlook.innerHTML = "Hot Hot Hot"
+                        dayOutlook.innerHTML = "It's feeling hot hot hot during the day today. Cool refreshments and good times are hopefully on deck for you. "
                     }
                     if (night < 32) {
-                        nightOutlook.innerHTML = "Frigid Night"
+                        nightOutlook.innerHTML = "Cozy up next to a warm fire, grab a nice novel or put on a good movie, because it's frigid out there tonight. "
                     }
                     if (night > 32 && night < 50) {
-                        nightOutlook.innerHTML = "Cold Night. "
+                        nightOutlook.innerHTML = "Going to be dipping into a chilly night, but nothing a sweatshirt or jacket can't protect you from. "
                     }
                     if (night > 50 && night < 70) {
-                        nightOutlook.innerHTML = "Pretty nice night. "
+                        nightOutlook.innerHTML = "Looks like a beautiful night is in the making, any outfit is on the table with this weather, except if it's raining, then have to get out the rainboots. "
                     }
                     if (night > 70) {
-                        nightOutlook.innerHTML = "Warm night. "
+                        nightOutlook.innerHTML = "A warm and cozy night outside, perfect for outdoor activities or hitting the town! "
                     }
                     morningOutlook.classList.add("is-size-2", "my-3")
                     dayOutlook.classList.add("is-size-2", "my-3")
                     nightOutlook.classList.add("is-size-2", "my-3")
-                    dailyOutlook.classList.add("title", "is-1", "my-3")
+                    dailyOutlook.classList.add("title", "is-1", "my-3", "is-underlined")
                     dailyOutlookEl.append(dailyOutlook)
                     dailyOutlookEl.append(morningOutlook)
                     dailyOutlookEl.append(dayOutlook)
