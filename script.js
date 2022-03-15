@@ -79,9 +79,25 @@ var zodiacResults = function() {
             zodiacDesc.innerHTML = "<u>Daily Horoscope:</u> <strong>" + data.description + "</strong>";
             zodiacDesc.classList.add("is-size-3", "my-3");
             zodiacResultsEl.append(zodiacDesc);
-            var zodiacMood = document.createElement("p");
+            var zodiacMood = document.createElement("a");
             zodiacMood.innerHTML = "<u>Mood:</u> <strong>" + data.mood + "</strong>";
             zodiacMood.classList.add("is-size-2", "my-3");
+            fetch("https://spotify23.p.rapidapi.com/playlist_tracks/?id=0ZST95FVIe0YCQ9fjMS7Ow&offset=0&limit=100", {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-host": "spotify23.p.rapidapi.com",
+                        "x-rapidapi-key": "3316d853b8msh8a70d2564ae8afdp175191jsn7f8129692ba4"
+                    }
+            })
+            .then(response => {
+                console.log(response);
+                if (response.ok)
+                response.json().then(function(data) {
+                    console.log(data)
+                    var song = data.items[1].track.external_urls.spotify
+                    zodiacMood.setAttribute("href", song)
+                    })
+            });
             zodiacResultsEl.append(zodiacMood);
             var zodiacNum = document.createElement("p");
             zodiacNum.innerHTML = "<u>Lucky Number:</u> <strong>" + data.lucky_number + "</strong>";
@@ -142,7 +158,6 @@ var getBackground = function(background) {
     }
     
 }
-
 
 
 buttonEl.addEventListener('click', function () {
