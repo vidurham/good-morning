@@ -103,9 +103,9 @@ var useOneCall = function (cityData) {
                     if (night > 70) {
                         nightOutlook.innerHTML = "A warm and cozy night outside, perfect for outdoor activities or hitting the town! "
                     }
-                    morningOutlook.classList.add("is-size-2", "my-3")
-                    dayOutlook.classList.add("is-size-2", "my-3")
-                    nightOutlook.classList.add("is-size-2", "my-3")
+                    morningOutlook.classList.add("is-size-3", "my-3")
+                    dayOutlook.classList.add("is-size-3", "my-3")
+                    nightOutlook.classList.add("is-size-3", "my-3")
                     dailyOutlook.classList.add("title", "is-1", "my-3", "is-underlined")
                     dailyOutlookEl.append(dailyOutlook)
                     dailyOutlookEl.append(morningOutlook)
