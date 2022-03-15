@@ -82,7 +82,34 @@ var zodiacResults = function() {
             var zodiacMood = document.createElement("a");
             zodiacMood.innerHTML = "<u>Mood:</u> <strong>" + data.mood + "</strong>";
             zodiacMood.classList.add("is-size-2", "my-3");
-            fetch("https://spotify23.p.rapidapi.com/playlist_tracks/?id=0ZST95FVIe0YCQ9fjMS7Ow&offset=0&limit=100", {
+            if (data.mood === "Sincere" || data.mood === "Thoughtful" || data.mood === "Cherishing" || data.mood === "Sweet") {
+                var playlist = "37i9dQZF1DXdPec7aLTmlC"
+            }
+            if (data.mood === "Independent" || data.mood === "Brave") {
+                playlist = "37i9dQZF1DWVY5eNJoKHd2"
+            }
+            if (data.mood === "Busy" || data.mood === "Serious" || data.mood === "Cautious") {
+                playlist = "2mz8otPq7vwtatQL6VxUha"
+            }
+            if (data.mood === "Friendly" || data.mood === "Social" || data.mood === "Cool" || data.mood === "Playful") {
+                playlist = "37i9dQZF1DXa2PvUpywmrr"
+            }
+            if (data.mood === "Relieved" || data.mood === "Refreshed" || data.mood === "Relaxed" || data.mood === "Calm") {
+                playlist = "37i9dQZF1DWYBO1MoTDhZI"
+            }
+            if (data.mood === "Accomplished" || data.mood === "Successful") {
+                playlist = "37i9dQZF1DX8dTWjpijlub"
+            }
+            if (data.mood === "Persuade" || data.mood === "Determined" || data.mood === "Focus" || data.mood === "Creative") {
+                playlist = "37i9dQZF1DX76Wlfdnj7AP"
+            }
+            if (data.mood === "Crazy") {
+                playlist = "37i9dQZF1DZ06evO3nMr04"
+            }
+            if (data.mood === "Lucky" || data.mood === "Attractive") {
+                playlist = "37i9dQZF1DX6GwdWRQMQpq"
+            }
+            fetch("https://spotify23.p.rapidapi.com/playlist/?id=" + playlist, {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "spotify23.p.rapidapi.com",
@@ -93,9 +120,8 @@ var zodiacResults = function() {
                 console.log(response);
                 if (response.ok)
                 response.json().then(function(data) {
-                    console.log(data)
-                    var song = data.items[1].track.external_urls.spotify
-                    zodiacMood.setAttribute("href", song)
+                    var songs = "https://open.spotify.com/playlist/" + playlist
+                    zodiacMood.setAttribute("href", songs)
                     })
             });
             zodiacResultsEl.append(zodiacMood);
