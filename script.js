@@ -5,6 +5,12 @@ var weatherEl = document.querySelector("#city-text")
 var weatherResultsEl = document.querySelector("#weather-results")
 var openingEl = document.querySelector(".opening")
 var resultsEl = document.querySelector(".results")
+var outlookEl = document.querySelector(".outlook")
+var selectEl = document.querySelector('#selection');
+var buttonEl = document.querySelector('#btn')
+var outlookBtn = document.querySelector("#daily-btn")
+var dailyOutlookEl = document.querySelector("#daily-outlook")
+var quizzesEl = document.querySelector("#daily-quizzes")
 
 
 var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q="
@@ -49,12 +55,66 @@ var useOneCall = function (cityData) {
                     nightText.innerHTML = "<u>Night feels like:</u> <strong>" + night +"</strong>°F";
                     nightText.classList.add("is-size-2", "my-3")
                     weatherResultsEl.append(nightText)
-                });
-        })   
-}
+                    
 
-var selectEl = document.querySelector('#selection');
-var buttonEl = document.querySelector('#btn')
+                    var dailyOutlook = document.createElement('h1')
+                    var morningOutlook =document.createElement("p")
+                    var dayOutlook = document.createElement("p")
+                    var nightOutlook = document.createElement("p")
+                    var city = cityEl.value;
+                    dailyOutlook.innerHTML = "Daily Outlook for " + city
+                    
+                    if (morning < 32) {
+                        morningOutlook.innerHTML = "Oh my its cold out there"
+                    }
+                    if (morning > 32 && morning < 50) {
+                        morningOutlook.innerHTML = "A bit nippy this morning! "
+                    }
+                    if (morning > 50 && morning < 70) {
+                        morningOutlook.innerHTML = "Feeling good out there"
+                    }
+                    if (morning > 70) {
+                        morningOutlook.innerHTML = "What a lovely morning"
+                    }
+                    if (day < 32) {
+                        dayOutlook.innerHTML = "So So Cold"
+                    }
+                    if (day > 32 && day < 50) {
+                        dayOutlook.innerHTML = "It's gonna be brisk out there"
+                    }
+                    if (day > 50 && day < 65) {
+                        dayOutlook.innerHTML = "Decent day, great for a long sleeve. "
+                    }
+                    if (day > 65 && day < 80) {
+                        dayOutlook.innerHTML = "It's gonna heat up a little bit out there overe the course of the day"
+                    }
+                    if (day > 80) {
+                        dayOutlook.innerHTML = "Hot Hot Hot"
+                    }
+                    if (night < 32) {
+                        nightOutlook.innerHTML = "Frigid Night"
+                    }
+                    if (night > 32 && night < 50) {
+                        nightOutlook.innerHTML = "Cold Night. "
+                    }
+                    if (night > 50 && night < 70) {
+                        nightOutlook.innerHTML = "Pretty nice night. "
+                    }
+                    if (night > 70) {
+                        nightOutlook.innerHTML = "Warm night. "
+                    }
+                    morningOutlook.classList.add("is-size-2", "my-3")
+                    dayOutlook.classList.add("is-size-2", "my-3")
+                    nightOutlook.classList.add("is-size-2", "my-3")
+                    dailyOutlook.classList.add("title", "is-1", "my-3")
+                    dailyOutlookEl.append(dailyOutlook)
+                    dailyOutlookEl.append(morningOutlook)
+                    dailyOutlookEl.append(dayOutlook)
+                    dailyOutlookEl.append(nightOutlook)
+                });
+        });
+}  
+
 
 var buildResults = function() {
     var sign = selectEl.value;
@@ -187,9 +247,17 @@ var getBackground = function(background) {
     
 }
 
+var getOutlook = function () {
+    resultsEl.classList.add("none")
+    outlookEl.classList.remove("none")
+}
 
 buttonEl.addEventListener('click', function () {
     findWeather();
     buildResults();
     zodiacResults();
 });
+
+outlookBtn.addEventListener('click', function() {
+    getOutlook();
+})
