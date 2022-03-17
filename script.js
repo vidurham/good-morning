@@ -142,31 +142,31 @@ var zodiacResults = function() {
             var zodiacMood = document.createElement("a");
             zodiacMood.innerHTML = "<u>Mood:</u> <strong>" + data.mood + "</strong>";
             zodiacMood.classList.add("is-size-2", "my-3");
-            if (data.mood === "Sincere" || data.mood === "Thoughtful" || data.mood === "Cherishing" || data.mood === "Sweet") {
+            if (data.mood === "Sincere" || data.mood === "Thoughtful" || data.mood === "Cherishing" || data.mood === "Sweet" || data.mood === "Mellow" || data.mood === "Generous") {
                 var playlist = "37i9dQZF1DXdPec7aLTmlC"
             }
-            if (data.mood === "Independent" || data.mood === "Brave") {
+            if (data.mood === "Independent" || data.mood === "Brave" || data.mood === "Curious" || data.mood === "Stubborn") {
                 playlist = "37i9dQZF1DWVY5eNJoKHd2"
             }
-            if (data.mood === "Busy" || data.mood === "Serious" || data.mood === "Cautious") {
+            if (data.mood === "Busy" || data.mood === "Serious" || data.mood === "Cautious" || data.mood === "Unhappy") {
                 playlist = "2mz8otPq7vwtatQL6VxUha"
             }
-            if (data.mood === "Friendly" || data.mood === "Social" || data.mood === "Cool" || data.mood === "Playful") {
+            if (data.mood === "Friendly" || data.mood === "Social" || data.mood === "Cool" || data.mood === "Playful" || data.mood === "Joyful" || data.mood === "Fun") {
                 playlist = "37i9dQZF1DXa2PvUpywmrr"
             }
-            if (data.mood === "Relieved" || data.mood === "Refreshed" || data.mood === "Relaxed" || data.mood === "Calm") {
+            if (data.mood === "Relieved" || data.mood === "Refreshed" || data.mood === "Relaxed" || data.mood === "Calm" || data.mood === "Humble" || data.mood === "Conservative" || data.mood === "Pleasant" || data.mood === "Patient") {
                 playlist = "37i9dQZF1DWYBO1MoTDhZI"
             }
             if (data.mood === "Accomplished" || data.mood === "Successful") {
                 playlist = "37i9dQZF1DX8dTWjpijlub"
             }
-            if (data.mood === "Persuade" || data.mood === "Determined" || data.mood === "Focus" || data.mood === "Creative") {
+            if (data.mood === "Persuade" || data.mood === "Determined" || data.mood === "Focus" || data.mood === "Creative" || data.mood === 'Demanding') {
                 playlist = "37i9dQZF1DX76Wlfdnj7AP"
             }
             if (data.mood === "Crazy") {
                 playlist = "37i9dQZF1DZ06evO3nMr04"
             }
-            if (data.mood === "Lucky" || data.mood === "Attractive") {
+            if (data.mood === "Lucky" || data.mood === "Attractive" || data.mood === "Dreamy"|| data.mood === "Loved") {
                 playlist = "37i9dQZF1DX6GwdWRQMQpq"
             }
             fetch("https://spotify23.p.rapidapi.com/playlist_tracks/?id=" + playlist, {
@@ -214,6 +214,10 @@ var zodiacResults = function() {
             };
             if (color === "Rose Pink") {
                 color = "pink";
+                zodiacEl.style.backgroundColor = color
+            };
+            if (color === "Copper") {
+                color = "chocolate";
                 zodiacEl.style.backgroundColor = color
             };
             zodiacEl.style.backgroundColor = color
