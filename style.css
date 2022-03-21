@@ -33,37 +33,37 @@
 }
 
 .mist {
-    background-image: url("mist.JPG");
+    background-image: url("./images/mist.JPG");
     background-size: 100% 100%;
 }
 
 .clear{
-    background-image: url("clear.JPG");
+    background-image: url("./images/clear.JPG");
     background-size: 100% 100%;
 }
 
 .light-cloud{
-    background-image: url("light-clouds.JPG");
+    background-image: url("./images/light-clouds.JPG");
     background-size: 100% 100%;
 }
 
 .cloudy{
-    background-image: url("cloudy.JPG");
+    background-image: url("./images/cloudy.JPG");
     background-size: 100% 100%;
 }
 
 .snowy{
-    background-image: url("snow.JPG");
+    background-image: url("./images/snow.JPG");
     background-size: 100% 100%;
 }
 
 .rainy{
-    background-image: url("rain.JPG");
+    background-image: url("./images/rain.JPG");
     background-size: 100% 100%;
 }
 
 .thunder{
-    background-image: url("thunder.JPG");
+    background-image: url("./images/thunder.JPG");
     background-size: 100% 100%;
 }
 
