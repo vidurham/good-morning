@@ -1,6 +1,6 @@
 # Good Morning App
 
-A morning application that allows a user to input their astrology sign and the city they live in to get a daily outlook for the day.
+A morning application that allows a user to input their astrology sign and the city they live in to get a daily outlook for the day, depending on the information the user has provided.
 
 Link: https://vidurham.github.io/good-morning/
 
